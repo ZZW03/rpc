@@ -10,15 +10,3 @@ nacos:
     server-addr: 127.0.0.1:8848
     namespace: 5510f6f2-67cb-438a-bca5-06d5d187d6c1
 
-zzw:
-  rpc:
-    nettyPort: 7777
-    serviceAddress: localhost
-    appPort: 9999
-
-spring:
-  application:
-    name: client
-
-server:
-  port: 9999

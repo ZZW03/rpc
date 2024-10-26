@@ -1,11 +1,15 @@
 package com.rpc;
 
 
-import com.rpc.netty.NettySever;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+
+@SpringBootApplication
+@ComponentScan(basePackages = {"com.rpc.sever", "com.register"})
 public class NettyStart {
     public static void main(String[] args) {
-        NettySever nettySever = new NettySever();
-        nettySever.start();
+        SpringApplication.run(NettyStart.class, args);
     }
 }

@@ -57,7 +57,7 @@ public class JdkProxyInvocationHandler implements InvocationHandler {
         CompletableFuture<Object> future = new CompletableFuture<>();
 
         // 设置超时
-        future.completeOnTimeout(null, 50000, TimeUnit.MILLISECONDS)
+        future.completeOnTimeout(null, 5000, TimeUnit.MILLISECONDS)
                 .exceptionally(ex -> {
                     log.error("Request timed out or failed: {}", ex.getMessage());
                     return null; // 返回 null 来避免 ClassCastException

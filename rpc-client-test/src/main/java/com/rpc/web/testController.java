@@ -1,6 +1,7 @@
 package com.rpc.web;
 
-import com.rpc.common.annotation.RpcConsumer;
+
+import com.rpc.annotation.RpcConsumer;
 import com.rpc.service.api.test;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,6 +1,7 @@
 package com.rpc.service.api.impl;
 
-import com.rpc.common.annotation.RpcProvide;
+
+import com.rpc.annotation.RpcProvide;
 import com.rpc.service.api.test;
 
 @RpcProvide

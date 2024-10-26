@@ -2,6 +2,7 @@ package com.rpc.client;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -13,6 +14,7 @@ public class  RpcClientProxy implements FactoryBean<Object>, InitializingBean {
     private Object object;
 
     private Class<?> interfaceClass;
+
 
     private Integer port;
 
@@ -26,7 +28,6 @@ public class  RpcClientProxy implements FactoryBean<Object>, InitializingBean {
     }
 
     public void generateProxy(){
-
         this.object= Proxy.newProxyInstance(interfaceClass.getClassLoader(),
                 new Class<?>[]{interfaceClass},
                 new JdkProxyInvocationHandler(port));

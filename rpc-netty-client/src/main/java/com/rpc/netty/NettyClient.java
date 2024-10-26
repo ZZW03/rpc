@@ -27,18 +27,16 @@ public class NettyClient {
 
     private int port;
 
-    @Value("${server.port}")
     private int selfPort;
 
-    public NettyClient(String ipaddr, int port) {
+    public NettyClient(String ipaddr, int port,int selfPort) {
         this.ipaddr = ipaddr;
         this.port = port;
+        this.selfPort = selfPort;
     }
 
     @Getter
     static ChannelFuture myChannel = null;
-
-
 
     @PostConstruct
     public void Start() {
@@ -59,6 +57,7 @@ public class NettyClient {
                     });
 
             ChannelFuture future = bootstrap.connect(ipaddr, port).sync();
+
             future.addListener((ChannelFuture channelFuture) -> {
                 if (channelFuture.isSuccess()) {
                     log.info("netty client connect success");
