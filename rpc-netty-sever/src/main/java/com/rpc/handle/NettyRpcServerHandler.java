@@ -1,10 +1,10 @@
-package com.rpc.common.netty.handles;
+package com.rpc.handle;
 
 import com.rpc.common.nacos.model.RpcServiceInstance;
 import com.rpc.common.nacos.service.RegisterService;
 import com.rpc.common.nacos.service.impl.RegisterServiceImpl;
 import com.rpc.common.netty.enums.ReqTypeEnum;
-import com.rpc.common.netty.holder.SocketHolder;
+import com.rpc.holder.SocketHolder;
 import com.rpc.common.netty.model.*;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
@@ -24,7 +24,6 @@ import static com.rpc.common.netty.enums.ReqTypeEnum.*;
 public class NettyRpcServerHandler extends SimpleChannelInboundHandler<RpcDomain> {
 
     static Map<Long, IpDetails> map = new ConcurrentHashMap<>();
-
 
 
     @Override

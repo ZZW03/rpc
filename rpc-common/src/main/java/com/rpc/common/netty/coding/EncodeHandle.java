@@ -1,4 +1,4 @@
-package com.rpc.common.netty.handles.coding;
+package com.rpc.common.netty.coding;
 
 
 import com.rpc.common.netty.model.RpcDomain;

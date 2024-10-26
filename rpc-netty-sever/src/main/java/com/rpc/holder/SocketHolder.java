@@ -1,4 +1,4 @@
-package com.rpc.common.netty.holder;
+package com.rpc.holder;
 
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.Getter;

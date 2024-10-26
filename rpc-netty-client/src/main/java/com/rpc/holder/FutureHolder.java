@@ -1,4 +1,4 @@
-package com.rpc.common.netty.holder;
+package com.rpc.holder;
 
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;

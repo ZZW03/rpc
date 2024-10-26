@@ -14,6 +14,7 @@ public class testController {
 
     @GetMapping("test")
     public String test(){
+        System.out.println(tes1.test1());
         return "test";
     }
 
